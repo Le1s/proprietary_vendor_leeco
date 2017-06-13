@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
-$(info [Decker] copying DP Framework proprietary blobs)
 
+$(info [Decker] copying DP Framework proprietary blobs)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE = libdpframework
@@ -23,3 +23,41 @@ LOCAL_MULTILIB = 32
 LOCAL_SRC_FILES_32 = proprietary/lib/libdpframework.so
 include $(BUILD_PREBUILT)
 
+
+$(info [SscSPs] copying APK files)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := GFManager
+LOCAL_MODULE_OWNER := Letv
+LOCAL_SRC_FILES := proprietary/app/GFManager/GFManager.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := LetvRemoteControl_preinstall
+LOCAL_MODULE_OWNER := Letv
+LOCAL_SRC_FILES := proprietary/app/LetvRemoteControl_preinstall/LetvRemoteControl_preinstall.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := UEIQuicksetSDKLeTV
+LOCAL_MODULE_OWNER := Letv
+LOCAL_SRC_FILES := proprietary/app/UEIQuicksetSDKLeTV/UEIQuicksetSDKLeTV.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
