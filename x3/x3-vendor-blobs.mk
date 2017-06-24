@@ -10,6 +10,12 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/leeco/x3/proprietar
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/leeco/x3/proprietary/vendor,system/vendor)
 
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/leeco/x3/proprietary/app,system/app)
+# Files from app folder
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/leeco/x3/proprietary/app/LetvRemoteControl_WW/lib,system/app/LetvRemoteControl_WW/lib)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/leeco/x3/proprietary/app/mcRegistry,system/app/mcRegistry)
 
-
+# App's apks
+PRODUCT_PACKAGES += \
+    GFManager \
+    LetvRemoteControl_WW \
+		UEIQuicksetSDKLeTV
