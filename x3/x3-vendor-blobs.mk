@@ -14,8 +14,10 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/leeco/x3/proprietar
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/leeco/x3/proprietary/app/LetvRemoteControl_WW/lib,system/app/LetvRemoteControl_WW/lib)
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/leeco/x3/proprietary/app/mcRegistry,system/app/mcRegistry)
 
-# App's apks
+# App's APKs
 PRODUCT_PACKAGES += \
-    GFManager \
-    LetvRemoteControl_WW \
-		UEIQuicksetSDKLeTV
+	GFManager \
+	LetvRemoteControl_WW \
+	UEIQuicksetSDKLeTV \
+	LocationEM2 \
+	MTKThermalManager
