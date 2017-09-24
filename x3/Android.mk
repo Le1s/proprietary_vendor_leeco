@@ -54,6 +54,16 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libnvramagentclient
+LOCAL_SRC_FILES_64 := proprietary/lib64/$(LOCAL_MODULE).so
+LOCAL_SRC_FILES_32 := proprietary/lib/$(LOCAL_MODULE).so
+LOCAL_SHARED_LIBRARIES := libbinder libnvram libstdc++
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
 
 $(info [SscSPs] copying APK files)
 
