@@ -15,6 +15,32 @@ LOCAL_SRC_FILES_64 := proprietary/lib64/libdpframework.so
 LOCAL_SRC_FILES_32 := proprietary/lib/libdpframework.so
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := librilmtk
+LOCAL_SRC_FILES_64 := proprietary/lib64/librilmtk.so
+LOCAL_SRC_FILES_32 := proprietary/lib/librilmtk.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := mtk-ril
+LOCAL_SRC_FILES_64 := proprietary/lib64/mtk-ril.so
+LOCAL_SRC_FILES_32 := proprietary/lib/mtk-ril.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libui_ext
+LOCAL_SRC_FILES_64 := proprietary/lib64/libui_ext.so
+LOCAL_SRC_FILES_32 := proprietary/lib/libui_ext.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
 
 $(info [SscSPs] copying APK files)
 
