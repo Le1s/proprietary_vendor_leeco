@@ -1,0 +1,14 @@
+cc_prebuilt_library_shared {
+    name: "libnvram",
+    target: {
+             android_arm: {
+                    srcs: ["proprietary/lib/libnvram.so"],
+             },
+             android_arm64: {
+                    srcs: ["proprietary/lib64/libnvram.so"],
+             },
+            },
+           strip: {
+                   none:true,
+             },
+    }
