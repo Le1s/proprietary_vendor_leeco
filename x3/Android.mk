@@ -38,6 +38,23 @@ LOCAL_PRIVILEGED_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := librilmtk
+LOCAL_SRC_FILES_64 := proprietary/lib64/librilmtk.so
+LOCAL_SRC_FILES_32 := proprietary/lib/librilmtk.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := mtk-ril
+LOCAL_SRC_FILES_64 := proprietary/lib64/mtk-ril.so
+LOCAL_SRC_FILES_32 := proprietary/lib/mtk-ril.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+include $(CLEAR_VARS)
 LOCAL_MODULE := LetvRemoteControl_preinstall
 LOCAL_MODULE_OWNER := Letv
 LOCAL_SRC_FILES := proprietary/app/LetvRemoteControl_preinstall/LetvRemoteControl_preinstall.apk
