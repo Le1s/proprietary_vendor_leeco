@@ -23,18 +23,22 @@ LOCAL_MULTILIB = 32
 LOCAL_SRC_FILES_32 = proprietary/lib/libdpframework.so
 include $(BUILD_PREBUILT)
 
-$(info [SscSPs] copying APK files)
+include $(CLEAR_VARS)
+LOCAL_MODULE := libion_mtk
+LOCAL_SRC_FILES_64 := proprietary/lib64/libion_mtk.so
+LOCAL_SRC_FILES_32 := proprietary/lib/libion_mtk.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := GFManager
-LOCAL_MODULE_OWNER := Letv
-LOCAL_SRC_FILES := proprietary/app/GFManager/GFManager.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
+LOCAL_MODULE := libged
+LOCAL_SRC_FILES_64 := proprietary/lib64/libged.so
+LOCAL_SRC_FILES_32 := proprietary/lib/libged.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -54,6 +58,21 @@ LOCAL_MULTILIB := both
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
+
+$(info [SscSPs] copying APK files)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := GFManager
+LOCAL_MODULE_OWNER := Letv
+LOCAL_SRC_FILES := proprietary/app/GFManager/GFManager.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := LetvRemoteControl_preinstall
 LOCAL_MODULE_OWNER := Letv
