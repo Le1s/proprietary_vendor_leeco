@@ -10,7 +10,7 @@ LOCAL_MODULE_OWNER = $VENDOR
 LOCAL_MODULE_SUFFIX = .so
 LOCAL_PROPRIETARY_MODULE = true
 LOCAL_MULTILIB = 64
-LOCAL_SRC_FILES_64 = proprietary/lib64/libdpframework.so
+LOCAL_SRC_FILES_64 = proprietary/vendor/lib64/libdpframework.so
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -20,7 +20,7 @@ LOCAL_MODULE_OWNER = mtk
 LOCAL_MODULE_SUFFIX = .so
 LOCAL_PROPRIETARY_MODULE = true
 LOCAL_MULTILIB = 32
-LOCAL_SRC_FILES_32 = proprietary/lib/libdpframework.so
+LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libdpframework.so
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -35,8 +35,8 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libion_mtk
-LOCAL_SRC_FILES_64 := proprietary/lib64/libion_mtk.so
-LOCAL_SRC_FILES_32 := proprietary/lib/libion_mtk.so
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libion_mtk.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libion_mtk.so
 LOCAL_MULTILIB := both
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
@@ -44,8 +44,8 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libged
-LOCAL_SRC_FILES_64 := proprietary/lib64/libged.so
-LOCAL_SRC_FILES_32 := proprietary/lib/libged.so
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libged.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libged.so
 LOCAL_MULTILIB := both
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
@@ -53,8 +53,8 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := librilmtk
-LOCAL_SRC_FILES_64 := proprietary/lib64/librilmtk.so
-LOCAL_SRC_FILES_32 := proprietary/lib/librilmtk.so
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/librilmtk.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/librilmtk.so
 LOCAL_MULTILIB := both
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
@@ -62,8 +62,8 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := mtk-ril
-LOCAL_SRC_FILES_64 := proprietary/lib64/mtk-ril.so
-LOCAL_SRC_FILES_32 := proprietary/lib/mtk-ril.so
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/mtk-ril.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/mtk-ril.so
 LOCAL_MULTILIB := both
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
