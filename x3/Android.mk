@@ -24,6 +24,16 @@ LOCAL_SRC_FILES_32 = proprietary/lib/libdpframework.so
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE = libcam.utils.sensorlistener
+LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+LOCAL_MODULE_OWNER = mtk
+LOCAL_MODULE_SUFFIX = .so
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_64 := proprietary/lib64/libcam.utils.sensorlistener.so
+LOCAL_SRC_FILES_32 = proprietary/lib/libcam.utils.sensorlistener.so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := libion_mtk
 LOCAL_SRC_FILES_64 := proprietary/lib64/libion_mtk.so
 LOCAL_SRC_FILES_32 := proprietary/lib/libion_mtk.so
